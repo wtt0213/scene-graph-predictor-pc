@@ -7,7 +7,7 @@ DESCRIPTION = "3D Scene Graph Models"
 
 
 if __name__ == "__main__":
-    version = "0.1.0"
+    version = "0.1.1"
 
     print(f"Building {PROJECT_NAME}-{version}")
 
@@ -26,8 +26,8 @@ if __name__ == "__main__":
         zip_safe=False,
         python_requires=">=3.8",
         install_requires=[
-            "trimesh",
-            "open3d",
+            "trimesh==3.12.7",
+            "open3d==0.16.0",
             'aiofiles',
             'fastapi',
             "uvicorn[standard]",

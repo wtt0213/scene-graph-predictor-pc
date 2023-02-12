@@ -1,6 +1,9 @@
 # 点云场景图预测使用说明
 
-# 1. 环境依赖
+# 1. 模型介绍
+
+
+# 2. 环境依赖
 
 CUDA版本: 11.3
 其他依赖库的安装命令如下：
@@ -17,10 +20,21 @@ pip install torch-spline-conv -f https://pytorch-geometric.com/whl/torch-1.12.1+
 pip install torch-geometric
 ```
 
-# 2. 下载安装
+# 3. 下载安装
 
-```
+```bash
 pip install scene-graph-predictor-pc
 ```
 
-# 3. 使用说明
+# 4. 使用说明
+```python
+import scene_graph_predictor_pc
+import trimesh
+
+plydata=trimesh.load('scene/scene0/labels.instances.align.annotated.v2.ply', process=False)
+model = scene_graph_predictor_pc.SceneGraphPredictor()
+# model 加载数据
+model.load('checkpoint')
+# 模型预测
+res = model.inference(plydata, 10)
+```
