@@ -7,9 +7,9 @@
 * 算法的输出是按照置信度排序后的三元组的列表，具体输出格式参考“使用说明”
 
 ## 算法介绍
-* 整体的算法参考了VLSAT中的知识迁移算法，以及《SceneGraphFusion: Incremental 3D Scene Graph Prediction from RGB-D Sequences》中的基础网络SGFN
+* 整体的算法参考了VLSAT中的知识迁移算法(如下)，以及《SceneGraphFusion: Incremental 3D Scene Graph Prediction from RGB-D Sequences》中的基础网络SGFN
+  ![alt VLSAT](pipeline.png)
 * 模型在训练的时候使用了集合了2D和语言信息的多模态知识迁移网络，在推理时仅使用点云就可以达到理想的结果
-* 本算法基于Pytorch框架开发
 
 ## 算法搭建库
 * 本算法基于Python和Pytorch搭建
